@@ -7,7 +7,10 @@ export default class GetLastMessagesServices {
             take: messages_number,
             orderBy: {
                 created_at: 'desc'
-            }
+            },
+	    include: {
+		user: true
+	    }
         });
     }
 }
